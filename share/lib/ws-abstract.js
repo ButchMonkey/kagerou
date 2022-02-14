@@ -199,6 +199,9 @@
           message: e.detail.message
         })
       })
+      document.addEventListener('EnmityTargetData', e=> {
+        this.emit('data', e.detail)
+      })
       document.addEventListener('onLogLine', e => {
         let d = e.detail
         if(d.opcode !== undefined) {
